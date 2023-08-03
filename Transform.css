@@ -1,0 +1,450 @@
+/* 
+2D Transform properties
+
+Scale
+-   ScaleX()
+-   scaleY()
+-   scale
+
+Rotete
+-   rotete()
+-   Deg => degree
+-   Rad => radians
+-   Grad => gradians
+-   Turn => turn
+-   360deg = 6.28rad = 400grad = 1turn
+
+Translate
+-   the value of numbers is positive to move it the right and negative the the left side
+-[To dive in]   Translation is the best in animation and it's better than [position] and you can know more about it from Paul Irich
+
+Skew
+-   skewx(..deg,rad,etc..)
+-   skewy()
+-   skew(.., ..)
+
+Matrix
+-   Transform => matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() )
+  = Transform => translateX() translateY() scaleX() skewY() skewX() scaleY() 
+-   لازم تعرف مين بشتغل الأول ومين اللي بييجي قبل مين والكلام ده
+-   [To dive in] you can dive in if you have a free time
+
+Transform-origin
+-   Syntax
+-   Default values => 50% 50% 0
+-   2D transform => transform-origin(X, Y)
+-   3D transform => transform-origin(X, Y, Z)
+X-Axis
+-CSS unit [px, em, rem, %, etc..]
+-Keyword
+--Left = 0%
+--Center = 50%
+--Right = 100%
+Y-Axis
+-CSS unit [px, em, rem, %, etc..]
+-Keyword
+--Top = 0%
+--Center = 50%
+--Bottom = 100%
+
+Rotate
+-   X, Y and Z
+
+Translate
+-   translate3d(X, Y, Z)
+
+Perspective
+-   perspective: 300px [لتحديد المسافة بينك وبينه]
+-   perspective-origin: right bottom [لتحديد مكان منظورك عليه]
+    [it's just like transform origin]
+
+Perspective-Origin
+*/
+
+.shape {
+    overflow: hidden;
+    width: 400px;
+    height: 300px;
+}
+
+.shape img {
+    transition: .5s;
+    width: 400px;
+    height: 300px;
+}
+
+.shape:hover img {
+    /* position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: rotate(360deg); */
+    transform: scale(1.3) rotate(10deg);
+    opacity: 0.5;
+}
+
+/* Don't forget prifexes:
+   -webkit-transform */
+
+.shape2 {
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 175, 169, 0.897);
+    position: relative;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shape2 .origin {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    transform: translate(0, 0);
+}
+
+.shape2:hover {
+    transform-origin: 80% 50%;
+    transform: rotate(360deg);
+}
+
+/*
+-
+Animation
+-   
+*/
+
+/* [Flip card project] */
+.container {
+    margin: 40px auto;
+    width: 200px;
+    perspective: 600px;
+}
+
+.box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.box:hover {
+    transform: rotateY(-180deg);
+}
+
+.box .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    backface-visibility: hidden;
+}
+
+.box .front {
+    background-color: red;
+}
+
+.box .back {
+    background-color: green;
+    transform: rotateY(180deg)
+}
+
+/* keyframes */
+.Animation {
+    position: absolute;
+    background-color: red;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    margin: 50px 50px;
+    animation-name: change-color;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    /* animation-timing-function: linear;
+    animation-direction: normal;
+    animation-delay: -2s;  */
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+
+@keyframes change-color {
+
+    /* from {
+        background-color: red
+    }
+
+    to {
+        background-color: blue;
+    } */
+    0% {
+        background-color: red
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: black;
+    }
+}
+
+/*
+Animation
+-   Iteration count
+-   Timing Function
+-   Spinner loading
+-   Direction: [default: normal] reverse, alternate, alternate-reverse 
+-   Delay
+-   Fill-mode: forwards, backwards, both
+-   Play-state: [default: running], paused
+-   Shorhand: 
+    animation: coloring 3s linear 2s infinite reverse;
+    [To dive in] Learn and read more about [cubic-bezier] 
+*/
+.itra {
+    position: absolute;
+    background-color: rgb(255, 209, 209);
+    width: 300px;
+    height: 300px;
+    display: flex;
+    margin: 50% 50px;
+    border-radius: 50%;
+    border: 5px solid rgb(189, 0, 0);
+    border-left-color: transparent;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: 3;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*
+-
+* {Always: don't forget vendor prifexes}
+-
+*/
+
+/* الزيرو:"إن شاء الله لما تتعلم الأدفانسد سيليكتورز 
+هتقدر تختار العنصر برقمه ومش هتحتاج تستخدم الكلاسيز" */
+
+/*
+    Loading Animation
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #333;
+}
+
+.load {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+.load div {
+    width: 20px;
+    height: 20px;
+    background-color: orchid;
+    border-radius: 50%;
+    margin: 0 5px;
+    animation-name: up-and-down;
+    animation-duration: 0.9s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.load .two {
+    animation-delay: 0.3s;
+}
+
+.load .one {
+    animation-delay: 0.6s;
+}
+
+@keyframes up-and-down {
+
+    /* from {
+        opacity:
+    } */
+    to {
+        opacity: 0.2;
+        transform: translateY(-20px);
+    }
+}
+
+/*
+    CSS Selectors
+    -   * => target all elements
+    -   Elements => [P, div, h2]
+    -   Element other element => div p
+    -   .class name
+    -   #id-name
+    -   .parent .child
+    -   .class-one.class-two => terget 2 classes at the same element
+    -   .class-name div
+    -   .class-name div, class-name p
+    -   Element.class-name
+    -   .class-name > .child => direct child
+    ============
+    == Part 2 ==
+    ============
+    - Element + [direct following] element => [div + p]
+    - Element ~ following brother Elements => [p ~ div]
+    - [Attribute] => to target all elements that have this [attribute]
+    - Element[Attribute]
+    - [Attribute=value]
+    - Element[Arrtibute=value] => input[type="search"]
+    - [Arrtibute~=value] => attribute that contains a word
+    - [Arrtibute*=value] => attribute that contains a string 
+        [string => is a part of a word]
+    - [Arrtibute^=value] => attribute that starts with a string 
+    ============
+    == Part 3 ==
+    ============
+    - :first-child
+    - :last-child
+    - :first-of-type
+    - :last-of-type
+    - :only-type
+    - :only-of-type
+    ============
+    == Part 4 ==
+    ============
+    - :not(Selectors)
+    - :nth-child(n)
+    - :nth-last-child(n)
+    - :nth-of-type(n)
+    - :nth-last-of-type(n)
+    ============
+    == Part 5 ==
+    ============
+    - :root
+    - :checked
+    - :empty
+    - :disabled
+    - :required
+    - :focus
+    - ::selection
+    - ::placeholder
+*/
+
+/*
+    Media Queries
+    Responsive Design
+    - Concept
+    - Mobile
+    - Small screens
+    - Medium Screens
+    - Large Screens
+    - Future Updates
+*/
+
+* {
+    box-sizing: border-box;
+    margin: wrap;
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.parent>div {
+    padding: 20px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {}
+
+/* Small Screens */
+
+@media (min-width: 768px) {
+    .parent div {
+        width: calc(50% - 5px);
+    }
+}
+
+/* Medium Screens */
+
+@media (min-width: 992px) {
+    .parent div {
+        width: calc(25% - 5px);
+    }
+}
+
+/* Large Screens */
+
+@media (min-width: 1200px) {}
+
+/* Frameworks:
+    - what's component? هو مجموعة العناصر اللي ممكن تكون بيها الموقع أو الصفحة بتاعتك
+    - أهمية الفريم ووركس: بتساعدك نشئ اليمنتس كتيرة وجديدة,
+    - وبيشارك في صنعها ناس كتير*/
+
+/*
+    Create Your frame work
+    [Note] do not use it for very short css components
+    but use it for important repetetive components
+*/
+
+/* 
+    CSS Global values
+    - inherit => توريث الخاصية
+    - initial => الخاصية الأصلية للعنصر
+    - unset => توريث الخاصية إن أمكن, وإن لم يمكن فترجعها للخاصية الأصلية
+    --- If inherit => inherit
+    --- If Not => initial
+    - revert CSS Level [4] => إرجاع خواص العنصر لليوزر ايجنت أي 
+    إعدادات المتصفح الأصلية وليس خواص العنصر الأصلية
+    - All
+*/
+
+/*
+=================
+== What's Next ==
+=================
+
+- 4 Practical Designs
+- Html + CSS Tutorials
+- CSS Bttle
+- Front-End Mentors
+- Ezero Challenges
+- Practical Practice Practice
+*/

@@ -1,0 +1,781 @@
+/*We use elemnt and attribute in Html but here in css we use=> selector {
+    Property: value;
+    Property: value;
+} */
+
+/* curley praces */
+/* cabab-case {https://elzero.org/css-formatting-guide/} */
+h1 {
+    background-color: aliceblue;
+    color: red;
+    font-size: 40px;
+    text-shadow: 1px 1px 0 black;
+    /* Text color
+        - background-color
+        - color
+        Text shadow
+        - Syntax => text-shadow: H-shadow v-shadow Blor color */
+    text-align: center;
+    direction: ltr;
+    /* left to tight  */
+    /* عند المحاذاة مع صورة */
+    /* vertical-align: top; */
+    /* text-decoration: line-through; */
+    text-decoration: underline;
+    /* يجعل أول حرف كابيتال أو غيره من الاستايلات */
+    text-transform: capitalize;
+    /* المسافة بين الكلمات */
+    letter-spacing: 1px;
+    /* is used to make a fixed distance between the edges and the text */
+    /* text-indent: 100px; */
+    /* line-height: 150px; */
+    word-spacing: 1px;
+    white-space: normal;
+    /* white-space: nowrap; */
+    word-break: normal;
+    /* word-break: break-word; */
+    text-overflow: ellipsis;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    /* font-size: medium;
+     ولكن لا يفضل استخدامها ويفضل استخدام وحدة البيكسلز الوحدة الديناميكية التي تتمددد مع الصفحة */
+    /* CSS Units
+        - px
+        - em => Time
+        - rem => Root time [from Html]
+        - percentage => from Dad element
+        - vw => viewport width
+        [يستخدم لعمل مساحة بناءا عليها يمكنك التحكم في حجم الشاشة داناميك]
+        
+        Read
+        - vmin
+        - vh
+        
+        lem= 16px this is wrong, because it's variable
+        Default font size for web page is 16px */
+    font-style: italic;
+    /* font-variant: small-caps;
+        [نادرا استخدامها: وهي جعل الحروف كابيتال ولكن أصغر قليلا */
+    /* font-weight: 800; */
+    font-weight: bold;
+}
+
+.parent1 {
+    background-color: green;
+    width: 200px;
+    height: 100px;
+    position: relative;
+}
+
+.logo {
+    background-color: aliceblue;
+    width: 50px;
+    /* position: static; => this is the default */
+    /* بيخلي العنصر يتحرك بناءا على نفسه
+    position: relative;
+    left: 10px; */
+    /* بيخلي العنصر يتحرك بناءا على الصفحة */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* يبقى ثابتا في مكانه
+        position: sticky;
+        top: 0; */
+}
+
+.scroll {
+    color: white;
+    background-color: rgb(1, 8, 110);
+    border: radious;
+    padding: 1px 1px;
+    width: 100px;
+    height: 30px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 2px 7px;
+    text-align: center;
+}
+
+body {
+    margin: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sections {
+    background-color: rgb(59, 59, 255);
+    padding: 10px;
+}
+
+.sections div {
+    opacity: 0.9;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: rgb(226, 226, 226);
+    float: left;
+    /* width: 18.8%; */
+    /* width: calc(88% / 5);
+    margin-left: 1%; */
+    width: calc((100% - 60xp) / 5);
+    margin-left: 10px;
+}
+
+/* To make spaces between the elements=>
+    content width is: 100%
+    5 spaces 1% * 5 => from content width
+    95% available space
+    4 lements the width is=> 95% / 4 */
+
+/* To make fixed spaces by pixels between the elements=>
+    content width is: 100%
+    6 spaces 15px * 6 => 90px from content width
+    100% - 90px available space
+    5 elements the width is=> (100% - 90xp) / 5 */
+
+.clear {
+    clear: both;
+}
+
+.index {
+    position: relative;
+}
+
+.index1,
+.index2 {
+    background-color: rgb(128, 0, 0);
+    color: white;
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+}
+
+.index1 {
+    background-color: blue;
+    left: 10px;
+    top: 10px;
+    /*  نظام الطبقات يمكنك من ترتيب الطبقات كما تريد يدويا
+        z-index: 2;
+        ولو عايز أخليه يرجع ورا جميع العناصر بكل بساطة 
+        بخلي قيمته -1 */
+}
+
+nav {
+    position: left;
+}
+
+.Book-sections {
+    border: 1px solid red;
+    padding: 10px 20px;
+}
+
+.romantic {
+    /*  هذه الخاصية مهمة جدا ويمكن أن توفر الكثير من الجهد والوقت في بعض الأحيان 
+        ألا وهي خاصية التوريث أو inherit*/
+    border: inherit;
+    padding: inherit;
+}
+
+.google {
+    background-color: red;
+    color: white;
+    border-radius: 2px;
+    padding: 3px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    /* cursor: grab; [with slides and others alot and it's considered
+    as a part of the UE user experience] */
+}
+
+/* Taget all paragraphs */
+/* ctr+/=> to make a comment every where */
+p {
+    color: black;
+}
+
+.c1 {
+    color: blue;
+    padding: 10px;
+    display: block;
+    color: rgb(255, 0, 0);
+    background-color: rgb(235, 235, 235);
+    box-sizing: border-box;
+    /* display: none; 
+        تقوم بحذف المكان تمام أما الvisibelity تقوم بحجز مكان*/
+    /* visibility: hidden; */
+}
+
+.c2 {
+    color: #000000;
+    background-color: rgb(235, 235, 235);
+}
+
+.c1,
+.c2 {
+    border-bottom: 5px solid black
+}
+
+a {
+    color: green;
+    text-decoration: none;
+}
+
+/* استخدام الclasses المزيفة
+لعمل ما يسمى بالstates للعنصر
+مثل عمل hover */
+
+a:hover {
+    color: red;
+}
+
+a:visited {
+    color: blue;
+}
+
+.ch:checked+label {
+    color: red;
+}
+
+.search {
+    border: 2px solid red;
+    width: fit-content;
+}
+
+.search:focus {
+    border-color: red;
+    outline: none;
+}
+
+.Lorem {
+    background-color: black;
+    background-color: rgb(0, 0, 0 / 50%);
+    /* red, green, blue - Alpha channel */
+    background-color: #000000;
+    color: white;
+    background-image: url("../imgs/تكنوتك\ للمعلوميات\ \(98\ ×\ 98\ بيكسل\).jpg");
+    /* no-rpeat, rpeat-x, repeat-y */
+    background-repeat: repeat-x;
+    /* scroll or fixed */
+    background-attachment: scroll;
+    background-position: left center;
+    background-position: 50px 30px;
+    background-position: 100% 50%;
+    /* auto value or cover or contain to be fully visible */
+    background-size: auto;
+    background-size: 50px 30px;
+}
+
+/* الهوامش الداخلية */
+.Lorem {
+    /* top right bottom left */
+    /* padding: 10px; */
+    /* top right */
+    /* padding: 10px 20px; */
+    /* padding: 0 10px 0; */
+    /* padding-right: 10px;
+    padding-left: 10px; */
+    padding: 10px;
+    /* margin: 70%; */
+    /* margin-right: 15px; */
+    /* margin-right: auto; */
+    /* margi: auto; */
+    /* margin=> accept the mince because it moves in the content of the webpage */
+}
+
+.list {
+    /* هذه كانت مجرد مقدمة تعريفية بسيطة ليس إلا */
+    list-style-position: inside;
+    /* يستخدم لتغيير رمز القائمة إلى أي صورة تحب
+     list-style-image: url("هنا نضع عنوان الصورة"); */
+}
+
+/* pseudo element */
+.Lorem2::first-letter {
+    background-color: red;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0px 4px;
+    padding: 2px;
+}
+
+.Lorem2::first-line {
+    background-color: rgb(0, 122, 27);
+    color: white;
+}
+
+.Lorem2 {
+    position: relative;
+    background-color: rgb(145, 145, 145);
+    width: 75%;
+    height: 100px;
+    margin-left: 30px;
+}
+
+.Lorem2::before {
+    content: "";
+    background-color: rgb(255, 255, 255);
+    padding: 1px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    margin-top: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent green transparent transparent;
+}
+
+/* .Lorem2::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: green;
+} */
+
+.Lorem2 {
+    counter-increment: members of lorem-counter;
+}
+
+.Lorem2::before {
+    content: attr"";
+}
+
+
+/* .Lorem2::after {
+    content: counter(members of lorem-counter);
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    top: 50%;
+    right: -10px;
+    font-weight: bold;
+    text-align: center;
+    background-color: green;
+    color: white;
+} */
+
+/* .Lorem2 .pipeleine {
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: green;
+} */
+
+::selection {
+    background-color: rgb(24, 0, 236);
+    color: white;
+}
+
+.list li {
+    background-color: #EEE;
+    margin-bottom: 30px;
+}
+
+/* Shorthand=> كتابة عدة خواص باختصار, نافغة لكنها تحد من التخصيص أو الcostumization */
+table {
+    /* border-width: 2px;
+    border-color: red blue;
+    border-style: solid; */
+    border: 3px solid rgb(3, 3, 3);
+    /* outline: 5px solid black; */
+    /* border=> is better than outline */
+    /* box-sizing=> is to make it more controled to the border */
+    /* border-radius: 30px; */
+    width: 50%;
+    border-spacing: 0px;
+}
+
+table td {
+    padding: 15px;
+    background-color: rgb(60, 167, 255);
+    /* border: 2px solid black; */
+}
+
+table thead td {
+    background-color: rgb(192, 192, 192);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* the defference between border and badding and margin=>
+    border=> is the bos lf the content
+    badding=> is the distance between the wall of the box and the content inside it
+    margin=> is the distance between the box and the content outside it or other elements */
+
+/*  Elements:
+     Block
+    - Take full width if no width
+    - Add line break
+    - Respect Padding, Margin, Hieght, etc
+
+    Inline
+    - Do not add line break
+    - Do not respect width, hieht
+    - Respect padding and margin [just from left anf right]
+    - Respect margin and margin [just from left anf right]
+
+    Inline-block
+    - Respect Padding, Margin, Hieght, etc
+    -Allow elements before and after it
+     */
+
+/* Nesting */
+div .hb3 {
+    color: red;
+}
+
+/* Dimentions */
+.mo {
+    /* min-width: 400px;
+    max-width: 800px; */
+    background-color: aquamarine;
+    padding: 10px;
+    max-height: 100px;
+    /* هو كده العنصر بلوك وفي نفس الوقت هيعمل فيت للكونتنت في الويدث بتاعه */
+    width: fit-content;
+}
+
+/* Overflow X and Y */
+.Lorem1 {
+    background-color: bisque;
+    max-height: 60px;
+    max-width: 400px;
+    /* overflow: hidden; */
+    /* overflow: scroll; */
+    /* overflow: auto; */
+    /* overflow-y: hidden; */
+    overflow-x: hidden;
+}
+
+/* .Lorem4 {
+    background-color: #EEE;
+    padding: 10px;
+    width: 600px;
+    float: left;
+    position: relative;
+}
+
+.Lorem4::before {
+    content: attr(data-text);
+    display: none;
+}
+
+.Lorem4:hover::before {
+    display: block;
+} */
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+}
+
+ul li::before {
+    content: "";
+    padding: 1px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    margin-top: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent green transparent transparent;
+    margin-bottom: 10px;
+}
+
+/* Vendors prefixes
+    Chrome
+    Sfari
+    Firefox
+    IE, Edge
+    Opera
+    
+    [1] New CSS features Appered
+    [2] Browsers test the feature in version x
+    [3] Browsers Add prefix to give developers the ability to use it
+    [4] The feature is fully supported in feature y 
+    
+    -webkit- => chrome, safari, New opera version 
+    -moz- => Firefox mozilla
+    -ms- => Ie, Edge
+    -o- Old version of Opera
+    =>> And i can check the using of it by website like 
+    -can i use- */
+
+/* .class {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+} */
+
+/* Notes with prefixes
+    [1] Most of users are using Modern Browsers
+    [2] Vs code Addon to Add the prefix
+    [3] Task runner [things we wil leatn them latter] */
+
+.Welcome {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 20px;
+    /* border-radius: 50%; */
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 4px 4px 5px 0 black, 8px 9px 4px 0 rgb(255, 0, 0), 13px 15px 3px 0 rgb(0, 47, 255);
+}
+
+/* 
+H-shadow, V-shadow, Blur, Spread, color, inset
+*/
+
+/* To apply box-sizing on all elements */
+/* * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+} */
+
+/* .parent2 {
+    background-color: #ddd;
+    width: 300px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.one {
+    background-color: #EEE;
+    width: 150px;
+    float: left;
+    padding: 10px;
+    border: 2px solid red;
+    box-sizing: border-box;
+    /* The default of => box-sizing: content-box; */
+
+.transition {
+    background-color: #EEE;
+    width: 400px;
+    height: 150px;
+    /* Soooo important  */
+    transition-duration: .5s;
+    /* transition-delay: .2s; */
+    /* transition-property: all; */
+    /* transition-property: width; */
+    /* transition-timing-function: ease; => [slow> fast> slow] */
+    /* transition-timing-function: ease-in-out; */
+    /* transition: width 2s, height 1s; */
+    /* transition: all du de ti; */
+}
+
+.transition:hover {
+    /* margin-left: 20px;
+    margin-top: 20px; */
+    width: 480px;
+    height: 300px;
+}
+
+/* 
+    The !Important declaration=> is used to override any 
+    other properites
+*/
+
+.parent3 {
+    background-color: #eee;
+    overflow: hidden;
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    margin: auto;
+}
+
+.parent3 .one,
+.parent3 .two {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+/* 
+    Margin collapse
+    [1] Only Vertical margin collapse
+    [2] Bigger margin wins
+    [3] Margin collapses with elements without 
+        anything between
+    [4] Nesting does not prevent collapsing
+*/
+.up {
+    background-color: green;
+    color: white;
+    height: 90px;
+    margin-bottom: 20px;
+}
+
+.down {
+    background-color: var(--maincolor, red);
+    color: white;
+    height: 90px;
+    margin-top: 20px;
+}
+
+/* 
+    CSS variables
+    - Global vzriables
+    - Local variables
+-   var(variable name, fallback value)
+*/
+
+:root {
+    --maincolor: blue;
+    --mainpadding: 10px;
+}
+
+.parent4 {
+    background-color: #EEE;
+    width: 25%;
+    height: 200px;
+}
+
+.var {
+    background-color: var(--maincolor, red);
+    height: 90px;
+    width: 90px;
+    padding: calc(10px + var(--mainpadding));
+}
+
+.Local {
+    --maincolor: black;
+    background-color: var(--maincolor);
+    color: white;
+    width: 50%;
+}
+
+.Local:hover {
+    width: 100%;
+    transition: .5s;
+}
+
+/* 
+    Flexible box
+    For patent
+    - display: flex => to start flexible box
+    - flex direction: row => default value
+    - flex wrap: nowrap => default value
+    - flex-flow: [flex-direction] + [flex-wrap]
+    ---
+    - بشكل عرضي justify-content: flex-start => default value
+    - بشكل طولي align-items: strech => default value
+    - align-content: strech => default value
+    - flex-grow: 0 => default value
+    - flex-shrink: 1 => default value
+    - order: 0 => default value
+    - flex-basis: auto => default value
+    - [Short hand] flex: [flex-grow] + [flex-shrink] + [flex-basis]
+    - display: inline-flex [باينة من اسمها]
+    - align-self: auto => default value
+*/
+
+.flex {
+    background-color: rgb(59, 59, 255);
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    flex-direction: row;
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap-reverse; */
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.flex div {
+    background-color: rgb(126, 0, 0);
+    color: white;
+    width: calc(98% / 3);
+    text-align: center;
+    padding: 20px;
+    /* align-items: center; */
+}
+
+/* Filters */
+img {
+    width: 25%;
+    height: 25%;
+    transition: 0.3s;
+    /* filter: search for filters list, and
+     don't forget the supporting; */
+    filter: blur(5px);
+}
+
+img:hover {
+    /* filter: search for filters list, and
+     don't forget the supporting; */
+    filter: blur(0);
+}
+
+/* Gradients */
+
+.gradients {
+    background-color: gray;
+    position: relative;
+    width: 400px;
+    height: 200px;
+}
+
+.gradients::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 10px;
+    background-color: red;
+    background-image: linear-gradient(to right, red 20%, red 40%, green 40%, green 60%, yellow 80%, rgb(46, 0, 119)80%, blue 80%);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 10px;
+    background-color: red;
+    background-image: linear-gradient(to right, blue, black);
+}
+
+/* 
+    Caret color: caret is the sign which apears when you focu on a search bar to write
+    and this property is used to change it's color to unites the identity of the website
+    Pointer events: this property is used to make (none) for acitons about any element
+*/
+
+/* 
+Grid system: هو النطام الشبكي لتخطيط الموقع، وليس له علاقة بتاتا بخاصية الرجريد
+Grid
+ parent
+-   display: grid | inline-grid | 
+-   grid-template-columns => [number of columns] => [px, %, auto, fraction, repeat method(), Mix]
+-   The defference between auto and 1fr: is that fr is greedy but auto is shy
+-   grid-template-rows => [number of rows height in] => [px, %, auto, fraction, repeat method(), Mix]
+-   row-gap, column-gap, and the shorthand [gap]
+ Child
+-   grid-column: [Grid column start] [Grid column end]
+-   grid-row: [Grid row start] [Grid row end]
+*/
