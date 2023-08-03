@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- As you're a beginner use comments 
+        every time you don't understand somethig like
+        This is for bla bla bla bla-->
+    <meta charset="UTF-8" />
+    <title>Book Store Project (Html & CSS)</title>
+    <meta name="description" content="This is my book store Project" />
+    <!-- this is CSS-->
+    <style></style>
+    <!-- this is Java Script-->
+    <script></script>
+    <!-- Always look at console because it will show that if there is any ptoblem-->
+    <!-- external style-->
+    <link rel="stylesheet" href="css/Master.css">
+    <!-- internal style-->
+    <style></style>
+</head>
+<!-- h1 h2 -->
+<h1>Book store - first project <br>Mohamed Ashraf</h1>
+
+<body>
+    <div class="page">
+        <div class="parent1">
+            <h2 class="logo" style="color: blueviolet;">logo</h2>
+        </div>
+        <div class="scroll">Scroll to top</div>
+        <div class="sections">
+            <div>Home</div>
+            <div>Xsection</div>
+            <div>contact with us</div>
+            <div>About us</div>
+            <div>section 5</div>
+            <p class="clear"></p>
+        </div>
+        <nav>
+            <ul>
+                <li>link-1</li>
+                <li>link-2</li>
+                <li>link-3</li>
+                <li>link-4</li>
+                <li>link-5</li>
+            </ul>
+        </nav>
+        <div class="index">
+            <div class="index1">index1</div>
+            <div class="index2">index2</div>
+        </div>
+        <br>
+        <section>
+            <figure>
+                <img src="" alt="">
+                <figcaption>caption image</figcaption>
+            </figure>
+        </section>
+        <aside>
+            sidebar
+        </aside>
+    </div>
+    <!-- Block element بيعمل مسافة قبله وبعده عشان العناصر ماتجيش جنب بعض
+            على عكس الInline element-->
+
+    <!-- Global attribute like (hidden & Class)
+                Element attribute for every element-->
+
+    <!-- b= Bold  
+                strong= Bold (but important)
+                i=  Italic (مائل)
+                em= Emphasized (but imporftant)
+                mark= Highlited text
+                u= underline
+                small= Smaller text
+                del= Deleted text
+                ins= inserted text (when adding something new)
+                sub= subscript (لكتابة المعادلات الكيميائية مثلا)
+                sup= superscript-->
+    <P class="c1">This is my <b>book store</b> Project,
+        <i>Welcome</i>
+    </P>
+    <p class="c2">We have a <mark><del>fake</del></mark> big sale</p>
+    <p><del>80</del>80</p>
+    <!-- <a> is an inline element
+                There are more attributes for it and you can seatch for it
+                when you need them-->
+    <a class="google" href="https://google.com" target="_blank" title="go to google">Google</a>
+    <a href="test.html" target="-blank" title="go to title page">Test page</a>
+    <a href="#Hi" target="" title="go to Hi sub">Hi subtitle</a>
+    <a href="mailto:bookstore@gmail.com" target="-blank" title="Contact us">Contact us</a>
+    <div class="p1">
+        <p class="Lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque eaque incidunt
+            voluptatibus
+            repudiandae
+            distinctio asperiores corrupti architecto fugit cumque quaerat nobis obcaecati alias, adipisci
+            reprehenderit
+            iste autem error placeat modi</p>
+        <p id="Hi" class="Lorem1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque eaque
+            incidunt
+            voluptatibus
+            repudiandae distinctio asperiores corrupti architecto fugit cumque quaerat nobis obcaecati alias,
+            adipisci
+            reprehenderit iste autem error placeat modi</p>
+        <p class="Lorem2" data-text="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque eaque
+            incidunt
+            voluptatibus
+            repudiandae distinctio asperiores corrupti architecto fugit cumque quaerat nobis obcaecati alias,
+            adipisci
+            reprehenderit iste autem error placeat modis<!-- <span class="pipeleine"></span> --></p>
+    </div>
+    <!-- image & paths-->
+    <!-- double click= /
+             back step=    ../ 
+            alt= alternative test for the image-->
+    <br>
+    <img src="imgs/تكنوتك للمعلوميات (98 × 98 بيكسل).jpg" alt="" width="" height="">
+    <ul class="list">
+        <li>Html</li>
+        <li>Css</li>
+        <li>JavaScript
+            <ul>
+                <li>Angular</li>
+                <li>Reactjs</li>
+                <li>Vuejs</li>
+            </ul>
+        </li>
+    </ul>
+    <!-- Separator -->
+    <!-- reversed=> reverse the ordering
+             start=> start from position
+             type=> type of ordering-->
+    <ol>
+        <li>Name</li>
+        <li>Address</li>
+        <li>Id</li>
+    </ol>
+    <!-- Separator -->
+    <!-- dl= description list
+             dt= term
+             dd= description term-->
+    <dl>
+        <dt>Html</dt>
+        <dd>language of web</dt>
+        <dt>Css</dt>
+        <dd>language of visuals</dd>
+    </dl>
+    <!-- Table
+             thead, tbody, tfoot
+             tr=> table row
+             td=> table data cell
+             th=> table header cell -->
+    <!-- to merge=> use the colspan and rowspan attribute -->
+    <!-- border attribute from html but it's not prefered -->
+    <table>
+        <caption>title of the table</caption>
+        <thead>
+            <tr>
+                <td>first name</td>
+                <td>second name</td>
+                <td>third name</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mohamed</td>
+                <td>Osama</td>
+                <td>Ahmed</td>
+            </tr>
+            <tr>
+                <td>Mohamed</td>
+                <td>Osama</td>
+                <td>Ahmed</td>
+            </tr>
+            <tr>
+                <td>Mohamed</td>
+                <td>Osama</td>
+                <td>Ahmed</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- span, break and horizontal rule-->
+    <!-- <span>=> to isolate an element and deal with it lonely
+             <br>=> break the line and make a new one 
+             <hr/> of course it's block not inline-->
+    <span>word</span><br>word
+    <hr />
+    <!-- div=> is called the master container
+             note=> لا يستخدم الdiv للنص وإنما ال <p>-->
+    <div class="Book-sections">
+        <div class="romantic">
+            <h2 class="hb1">Book store</h2>
+            <p>Book description</p>
+            <span>100$</span>
+        </div>
+        <br>
+        <div class="fantasy">
+            <h2 class="hb2">Book store</h2>
+            <p>Book description</p>
+            <span>100$</span>
+        </div>
+        <br>
+        <div class="policy">
+            <h2 class="hb3">Book store</h2>
+            <p>Book description</p>
+            <span>100$</span>
+        </div>
+    </div>
+    <!-- you can seach for other entities when you need like copy right entity-->
+    <div>
+        <p>this is intity &lt;p&gt; test [paragraph outside div] </p>
+    </div>
+    <div class="mo"> Mohammed Ashraf Ali</div>
+    <!-- semantic elements=> div we use to layout the site -->
+    <!-- audio tag-->
+    <br>
+    <audio controls>
+        <!-- every audio file has a mime type -->
+        <!-- audio attributes=> controls, autoplay, loop, muted-->
+        <source src="midea/one_way_ticket.mp3" type="audio/mpeg">
+        <source src="midea/one_way_ticket.wav" type="audio/ogg">
+        You browser doesn't support audio tags
+    </audio>
+    <br>
+    <br>
+    <!-- poster=> is used to show before loading the video-->
+    <video controls width="" height="" auotoplay muted>
+        <source src="media/ghosts.mp4" type="video/mp4">
+        <source src="media/ghosts.ogg" type="video/ogg">
+        Your browser does not support video tads
+        <!-- track=> is used to provide translation for disapled humans or for any other reasons-->
+
+        <track src="my_file_en.vtt" kind="subtitles" srclang="en" label="english">
+        <track src="my_file_en.vtt" kind="subtitles" srclang="ar" label="arabic">
+    </video>
+    <!--- action attribute=> is used to sent data to backend -->
+    <!-- get & Post is used to hide ot show data in the url bar-->
+    <!-- readonly & disapled to meke it imposiple to change the input
+             or to make it impossiple to send data-->
+    <form action="" method="get" novalidate target="_blank">
+        <div>
+            <label>username</label>
+            <input required type="text" placeholder="username" readonly>
+        </div>
+        <br>
+        <div>
+            <!-- minlength & the opposite are easy-->
+            <label>password</label>
+            <input required type="password" placeholder="make it complex" minlength="5" maxlength="8">
+        </div>
+        <br>
+        <div>
+            <label>email</label>
+            <input type="email" required placeholder="your email" value="old email@gmail.com">
+        </div>
+        <br>
+        <div>
+            <label>subject</label>
+            <input type="text">
+            <!-- more attributes in forms
+                 type= hidden is used to hide the input
+                 type= reset is used to make a reset button-->
+        </div>
+        <!-- range & number attrubutes-->
+        <input type="range" name="range" min="0" max="100" value="80" step="10">
+        <br>
+        <label>Number</label>
+        <input type="bumber" min="10" max="200" step="50">
+        <br>
+        <input type="color">
+        <br>
+        <!-- to make it checked automaicallu-->
+        <!-- id & for to link the label with the input -->
+        <div>
+            <input id="windows" type="radio" value="windows" name="os" checked>
+            <label for="windows">windows</label>
+        </div>
+        <br>
+        <div>
+            <input id="Linux" type="radio" value="Linux" name="os">
+            <label for="Linux">Linux</label>
+        </div>
+        <br>
+        <div>
+            <input id="Mac" type="radio" value="Mac" name="os">
+            <label for="Mac">Mac</label>
+        </div>
+        <br>
+        <!-- checkbox -->
+        <div>
+            <input class="ch" id="windows" type="checkbox" value="windows" name="os" checked>
+            <label for="windows">windows</label>
+        </div>
+        <br>
+        <div>
+            <input id="Linux" type="checkbox" value="Linux" name="os">
+            <label for="Linux">Linux</label>
+        </div>
+        <br>
+        <div>
+            <input id="Mac" type="checkbox" value="Mac" name="os">
+            <label for="Mac">Mac</label>
+        </div>
+        <br>
+        <!-- select -->
+        <label id="books">choose book</label>
+        <select for="books" name="Book">
+            <optgroup label="romantic">
+                <option value="1">Book 1</option>
+                <option value="2">Book 2</option>
+                <option value="3" selected>Book 3</option>
+            </optgroup>
+        </select>
+        <br>
+        <!-- textarea -->
+        <textarea name="subject" placeholder="test test for text" cols="50" rows="30"></textarea>
+        <br>
+        <input type="file">
+        <br><br>
+        <div class="search">
+            <label>search</label>
+            <input type="search">
+        </div>
+        <br>
+        <input type="date">
+        <br>
+        <input type="url">
+        <br>
+        <!-- the defference between it and the select
+         that you can search in it -->
+        <input list="programming" name="coding">
+        <datalist>
+            <option value="Html"></option>
+            <option value="Css"></option>
+            <option value="JavaScript"></option>
+        </datalist>
+        <input type="submit" value="save">
+        <input type="reset" value="reset">
+    </form>
+    <br>
+    <!-- other new elements -->
+    <!-- intline element -->
+    <q>A wise qoute</q>
+    <!-- block element -->
+    <blockquote>A wise qoute</blockquote>
+    <br>
+    <button>don't click on this button</button>
+    <br>
+    <div class="Lorem3">
+        Lorem ipsum dolor sit amet consectetur <wbr> adipisicing elit. Consequatur, distinctio mollitia vel veritatis architecto quaerat aut
+        <wbr> harum quis facere quibusdam blanditiis incidunt ipsam minima animi, quidem,<wbr> aperiam illum eius doloribus?
+    </div>
+    <br>
+    <!-- bdi=> is used to isolate the elements because of the direction of the language of the browser-->
+    <p>السلام <bdi>2</bdi> Welcome</p>
+    <br>
+    <code>
+        <pre>
+        is used to save the code as it is like this 
+        var x = 10 ;
+        var y = 20 ;
+        console.log(x + y);
+        </pre>
+    </code>
+    <br>
+    <!-- iframe=> is used to show another source directly in our website-->
+    <!-- there are some websites band iframe with it-->
+    <iframe src="https://elzero.org/" frameborder="0"></iframe>
+    <!-- accecibelity=> you've to search more about it
+    when you want to -->
+    <!-- يمكن استخدام سمات أو attributes أخرى لتقوم بنفس عمل العناصر الأخرى, تماما مثل استخدا م الaria-->
+    <!-- aria attributes from the attributes of Accecibellity which is a wonderfull world-->
+    <div role="checkbox" aria-checked="true" tabindex="0" aria-labelledby="Plan1">plan one</div>
+    <br>
+    <label id="Plan1">plan one</label>
+    <br>
+    <div tabindex="0">plan two</div>
+    <br>
+    <div tabindex="0">plan three</div>
+    <div class="Lorem4" data-text="somethig">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et cum
+        dolorem
+        debitis excepturi
+        quidem sit nihil
+        dicta, voluptate aut magnam. Maxime quam exercitationem cum. Atque vero minima excepturi cupiditate nisi.
+    </div>
+    <hr>
+    <ul class="ul1">
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+    </ul>
+    <div class="Welcome">
+    </div>
+    <div class="parent2">
+        <div class="one">one</div>
+        <div class="one">one</div>
+    </div>
+    <div class="transition">
+    </div>
+    <div class="parent3">
+        <div class="one"></div>
+        <div class="two">
+            <div class="up"></div>
+            <div class="down"></div>
+        </div>
+    </div>
+    <div class="parent4">
+        <div class="var"></div>
+    </div>
+    <div class="Local">Local</div>
+    <div class="flex">
+        <div>Home</div>
+        <div>Xsection</div>
+        <div>contact with us</div>
+    </div>
+    <div class="gradients"></div>
+</body>
+
+</html>
